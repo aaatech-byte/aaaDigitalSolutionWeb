@@ -1,0 +1,88 @@
+.job-container {
+    width: 100%;
+  
+    padding: 20px;
+    
+  }
+  
+  .job-form{
+    background: linear-gradient(45deg,#365946, #220371);
+    height: 60vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10vh;
+      border-radius: 8px;
+  width: 60vw;
+    
+  }
+  .search-box,
+  .fetch-job {
+    background: linear-gradient(45deg,#365946, #220371);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-form h3,
+  .fetch-job h3 {
+    margin-bottom: 10px;
+  }
+  
+  .job-form input,
+  .job-form select,
+  .job-form textarea,
+  .search-box input,
+  .fetch-job input {
+    width: 60%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  .job-form button,
+  .fetch-job button {
+    background: #220371;
+    color: yellow;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 10vw;
+    margin-top: 2vh;
+  }
+  
+  .job-form button:hover,
+  .fetch-job button:hover {
+    background: #0056b3;
+  }
+  
+  .job-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .job-card {
+    background: linear-gradient(45deg,#365946, #220371);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+  }
+  
+  .delete-btn {
+    background: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 5vw;
+  }
+  
+  .delete-btn:hover {
+    background: darkred;
+  }
+  

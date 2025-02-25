@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f=clash-display@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Clash Display', sans-serif !important;
+  letter-spacing: 1px;
+  background: #3D1794;
+}
+
+.gradient-primary{
+    background: linear-gradient(177deg, #3f15a0, #13072E);
+}
+
+/* see more styling  */
+.btn {
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  font-weight: 500;
+}
+
+
+.btn::after {
+  content: "";
+  border-bottom: 3px double #ffff00;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  margin-top: -5px;
+  top: 0;
+  left: 0px;
+  visibility: hidden;
+  opacity: 1;
+  transition: 0.2s linear;
+}
+
+.btn .icon {
+  transform: translateX(0%);
+  transition: 0.2s linear;
+  animation: attention 1.2s linear infinite;
+}
+
+.btn:hover::after {
+  visibility: visible;
+  opacity: 0.7;
+  width: 80%;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.btn:hover>.icon {
+  transform: translateX(30%);
+  animation: none;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+}
+
+.animate-girl {
+  animation: moveUpDown 1.9s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 0px;
+  }
+
+  /* 25% {
+      bottom: 20px; 
+    } */
+  /* 50% {
+      bottom: 30px; 
+    } */
+  /* 75% {
+      bottom: 40px; 
+    } */
+  100% {
+    bottom: 50px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+/* @media only screen and (max-width: 800px) {
+  .work-process {
+    display: none;
+  }
+} */
+
+.ReactModal__Overlay{
+  z-index: 99;
+} 

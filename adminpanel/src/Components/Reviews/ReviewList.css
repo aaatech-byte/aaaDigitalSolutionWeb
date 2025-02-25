@@ -1,0 +1,86 @@
+.review-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.review-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: center;
+}
+
+.review-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.review-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-comment {
+  font-size: 14px;
+  color: #555;
+}
+
+.review-rating {
+  font-size: 20px;
+  color: gold;
+  margin: 5px 0;
+}
+
+.star-count {
+  font-size: 14px;
+  color: #333;
+}
+
+.review-designation {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.delete-button {
+  background: red;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background: darkred;
+}
+.star-rating {
+  font-size: 18px;
+  color: gold; 
+  display: inline-block;
+}
+
+.rating-number {
+  font-size: 16px;
+  color: black;
+  margin-left: 5px;
+}

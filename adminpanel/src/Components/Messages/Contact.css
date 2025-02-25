@@ -1,0 +1,83 @@
+
+.messages-container {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  background: linear-gradient(45deg,#365946, #220371);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: yellow;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: linear-gradient(45deg,#365946, #220371);
+  color: white;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  color: white;
+}
+
+.contact-table th {
+  background: linear-gradient(45deg,#365946, #220371);
+  color: white;
+  font-weight: bold;
+}
+
+.contact-table tr:nth-child(even) {
+  background: linear-gradient(45deg,#365946, #220371);
+}
+
+.contact-table tr:hover {
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* No contacts or loading message */
+p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  font-style: italic;
+}
+.email-link {
+  color: #4caf50;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #2e7d32;
+  text-decoration: underline;
+}
