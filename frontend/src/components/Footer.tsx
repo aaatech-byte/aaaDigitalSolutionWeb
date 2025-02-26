@@ -2,78 +2,12 @@ import { Facebook, Linkedin, Instagram } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import pinterestIco from "../../public/icons/pinterestLOGO.png"
 
-type SocialLink = {
-  name: string;
-  url: string;
-  icon: JSX.Element;
-};
-
-type Service = {
-  name: string;
-};
-
-type CompanyLink = {
-  name: string;
-  path: string;
-};
-
-type ContactInfo = {
-  email: string;
-  addressLink: string;
-};
-
-type FooterData = {
-  logoSrc: string;
-  description: string;
-  socialLinks: SocialLink[];
-  services: Service[];
-  companyLinks: CompanyLink[];
-  contactInfo: ContactInfo;
-  address: string;
-  address2: string;
-  address3: string;
-};
-
-const footerData: FooterData = {
-  logoSrc: "/icons/logoDIGITAL.png", 
+const footerData = {
+  logoSrc: "/icons/logoDIGITAL.png",
   description:
     "Revolutionize your business with bold digital solutions that drive growth, enhance efficiency, and unlock limitless potential in the evolving digital landscape.",
-  socialLinks: [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/company/aaa-digital-marketing",
-      icon: <Linkedin size={24} />,
-    },
-    {
-      name: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=61566395171281",
-      icon: <Facebook size={24} />,
-    },
-    {
-      name: "Instagram",
-      url: "https://www.instagram.com/aaadigitalltd/",
-      icon: <Instagram size={24} />,
-    },
-  ],
-  services: [
-    { name: "Web Development" },
-    { name: "App Development" },
-    { name: "Custom Software Development" },
-    { name: "E-Commerce Solutions"},
-    { name: "Digital Marketing"},
-    { name: "Social Media Marketing" },
-    { name: "Email Marketing"},
-    { name: "Video Marketing & Branding" },
-  ],
-  companyLinks: [
-    { name: "About us", path: "/about" },
-    { name: "Services", path: "/about" },
-    { name: "Our Work", path: "/work" },
-    { name: "Blogs", path: "/blog" },
-    { name: "Careers", path: "/contact" },
-    { name: "Contact Us", path: "/contact" },
-  ],
   contactInfo: {
     email: "aaadigitalltd@gmail.com",
     addressLink: "https://www.google.com/maps/place/Pennsylvania,+USA",
@@ -86,7 +20,7 @@ const footerData: FooterData = {
 export default function Footer() {
   const navigate = useNavigate();
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path) => {
     navigate(path);
     window.scrollTo(0, 0);
   };
@@ -106,19 +40,43 @@ export default function Footer() {
               {footerData.description}
             </p>
             <div className="flex space-x-6 mt-6">
-              {footerData.socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  className="text-gray-200 hover:text-yellow transition-transform transform hover:scale-110"
-                  aria-label={link.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.icon}
-                </a>
-              ))}
-               </div>
+              <a
+                href="https://www.linkedin.com/company/aaa-digital-marketing"
+                className="text-gray-200 hover:text-yellow transition-transform transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61566395171281"
+                className="text-gray-200 hover:text-yellow transition-transform transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/aaadigitalltd/"
+                className="text-gray-200 hover:text-yellow transition-transform transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="https://www.pinterest.com/aaadigitalltd/"
+                className="text-gray-200 hover:text-yellow transition-transform transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img src={pinterestIco} className="w-7" alt="" />
+              </a>
+            </div>
           </div>
 
           {/* Services */}
@@ -127,13 +85,19 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-2">
-              {footerData.services.map((service, index) => (
+              {[
+                "Web Development",
+                "App Development",
+                "Custom Software Development",
+                "E-Commerce Solutions",
+                "Digital Marketing",
+                "Social Media Marketing",
+                "Email Marketing",
+                "Video Marketing & Branding",
+              ].map((service, index) => (
                 <li key={index}>
-                  <button
-                    // onClick={() => handleNavigation(service)}
-                    className="text-gray-200 hover:text-yellow transition duration-300 transform hover:translate-x-2"
-                  >
-                    {service.name}
+                  <button className="text-gray-200 hover:text-yellow transition duration-300 transform hover:translate-x-2">
+                    {service}
                   </button>
                 </li>
               ))}
@@ -146,7 +110,14 @@ export default function Footer() {
               Pages
             </h4>
             <ul className="space-y-2">
-              {footerData.companyLinks.map((link, index) => (
+              {[
+                { name: "About us", path: "/about" },
+                { name: "Services", path: "/about" },
+                { name: "Our Work", path: "/work" },
+                { name: "Blogs", path: "/blog" },
+                { name: "Careers", path: "/contact" },
+                { name: "Contact Us", path: "/contact" },
+              ].map((link, index) => (
                 <li key={index}>
                   <button
                     onClick={() => handleNavigation(link.path)}
@@ -174,33 +145,20 @@ export default function Footer() {
               <span className="text-sm">{footerData.contactInfo.email}</span>
             </div>
 
-            <div
-              className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
-              onClick={() =>
-                window.open(footerData.contactInfo.addressLink, "_blank")
-              }
-            >
-              <LocationOnIcon className="mr-2" />
-              <span className="text-sm">{footerData.address}</span>
-            </div>
-            <div
-              className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
-              onClick={() =>
-                window.open(footerData.contactInfo.addressLink, "_blank")
-              }
-            >
-              <LocationOnIcon className="mr-2" />
-              <span className="text-sm">{footerData.address2}</span>
-            </div>
-            <div
-              className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
-              onClick={() =>
-                window.open(footerData.contactInfo.addressLink, "_blank")
-              }
-            >
-              <LocationOnIcon className="mr-2" />
-              <span className="text-sm">{footerData.address3}</span>
-            </div>
+            {[footerData.address, footerData.address2, footerData.address3].map(
+              (address, index) => (
+                <div
+                  key={index}
+                  className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
+                  onClick={() =>
+                    window.open(footerData.contactInfo.addressLink, "_blank")
+                  }
+                >
+                  <LocationOnIcon className="mr-2" />
+                  <span className="text-sm">{address}</span>
+                </div>
+              )
+            )}
           </div>
         </div>
 
