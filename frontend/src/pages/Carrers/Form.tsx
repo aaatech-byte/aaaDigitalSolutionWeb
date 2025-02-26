@@ -43,7 +43,8 @@ const JobApplicationForm: React.FC = () => {
     formDataToSend.append("cv", formData.cv as File);
 
     try {
-      const response = await fetch("http://localhost:5012/api/job-applications", {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${apiUrl}/api/job-applications`, {
         method: "POST",
         body: formDataToSend,
       });
