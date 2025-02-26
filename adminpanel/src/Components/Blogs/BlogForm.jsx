@@ -49,7 +49,8 @@ const BlogForm = () => {
     }
 
     try {
-      await axios.post("http://localhost:5012/api/blogs", formData, {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      await axios.post(`${apiUrl}/api/blogs`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

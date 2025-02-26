@@ -31,7 +31,8 @@ const ProjectForm = () => {
     console.log('Form data being sent:', formData);
   
     try {
-      const response = await axios.post('http://localhost:5012/api/projects', formData, {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await axios.post(`${apiUrl}/api/projects`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

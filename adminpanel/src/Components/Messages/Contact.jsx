@@ -9,7 +9,8 @@ const Contact = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('http://localhost:5012/api/contact');
+        const apiUrl = import.meta.env.VITE_API_URL;
+        const response = await axios.get(`${apiUrl}/api/contact`);
         if (response.data && Array.isArray(response.data.contactMessages)) {
           setContacts(response.data.contactMessages);
         } else {

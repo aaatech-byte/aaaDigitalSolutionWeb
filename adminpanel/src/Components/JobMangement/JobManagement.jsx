@@ -15,8 +15,8 @@ const JobManagement = () => {
     responsibilities: "",
     skills: "",
   });
-
-  const API_URL = "http://localhost:5012/api/jobs";
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const API_URL = `${apiUrl}/api/jobs`;
 
   // Fetch all jobs
   const fetchJobs = async () => {

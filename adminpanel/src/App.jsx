@@ -6,7 +6,6 @@ import Contact from "./Components/Messages/Contact";
 import Blogs from "./Components/Blogs/Blogs";
 import Projects from "./Components/Projects/Projects";
 import JobApplications from "./Components/JobApplications/jobApplication";
-import JobApplicationForm from "./JobApplicationForm";
 import ReviewList from "./Components/Reviews/ReviewList";
 import JobManagement from "./Components/JobMangement/JobManagement";
 import AdminLogin from "./Components/Admin/AdminLogin";
@@ -45,7 +44,6 @@ function App() {
               <Route path="job" element={<JobApplications />} />
               <Route path="projects" element={<Projects />} />
               <Route path="reviews" element={<ReviewList />} />
-              <Route path="test" element={<JobApplicationForm />} />
               <Route path="change-password" element={<ForgotAndResetPassword />} />
             </Route>
             <Route path="*" element={<Navigate to="/" />} />

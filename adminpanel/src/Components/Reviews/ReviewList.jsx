@@ -9,7 +9,8 @@ const ReviewList = () => {
   const fetchReviews = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5012/api/reviews");
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await axios.get(`${apiUrl}/api/reviews`);
       setReviews(response.data);
     } catch (error) {
       console.error("Error fetching reviews:", error);

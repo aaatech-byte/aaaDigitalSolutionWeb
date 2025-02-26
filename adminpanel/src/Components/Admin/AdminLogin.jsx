@@ -14,7 +14,8 @@ const AdminLogin = ({ setIsAuthenticated }) => {
     e.preventDefault();
     setError("");
     try {
-      const response = await axios.post("http://localhost:5012/api/admin/login", { email, password });
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await axios.post(`${apiUrl}/api/admin/login`, { email, password });
       localStorage.setItem("adminToken", response.data.token);
       setIsAuthenticated(true); 
       navigate("/"); 

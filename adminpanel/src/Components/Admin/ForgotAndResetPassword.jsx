@@ -21,7 +21,8 @@ const ForgotAndResetPassword = () => {
   const handleSendOTP = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5012/api/admin/forgot-password", { email: data.email });
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const res = await axios.post(`${apiUrl}/api/admin/forgot-password`, { email: data.email });
       setMessage(res.data.message);
       setStep(2);
     } catch (error) {
