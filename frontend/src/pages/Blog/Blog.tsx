@@ -51,7 +51,7 @@ const posts: Post[] = [
     date: "Mar 15, 2024",
     readTime: "4 min read",
     image:
-      "images/blog_images/blog5.jpg",
+      "images/blog_images/blog3.jpg",
     link: "/blog/blog3",
   },
 
@@ -75,7 +75,7 @@ const posts: Post[] = [
     date: "Feb 10, 2024",
     readTime: "5 min read",
     image:
-      "images/blog_images/blog3.jpg",
+      "images/blog_images/blog5.jpg",
     link: "/blog/blog5",
   },
   {
@@ -91,11 +91,10 @@ const posts: Post[] = [
   },
 ];
 
-
 export default function Blog() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
+  // Removed unused state
+  // const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const navigate = useNavigate();
   const handleNavigation = (path: string) => {
@@ -103,9 +102,8 @@ export default function Blog() {
     window.scrollTo(0, 0);
   };
 
-  const filteredPosts = selectedCategory
-    ? posts.filter((post) => post.category === selectedCategory)
-    : posts;
+  // Removed filtering logic as selectedCategory is not used
+  const filteredPosts = posts;
 
   return (
     <main className="bg-gradient-primary">
@@ -140,26 +138,23 @@ export default function Blog() {
 
       <div className="flex justify-center flex-wrap md:flex-row flex-col pt-20 pb-10">
 
-
         <section className="sm:w-3/4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
                 <div
                   key={index}
-                  className="rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 ease-in-out hover:shadow-2xl transition duration-300"
+                  className="rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 ease-in-out hover:shadow-2xl transition duration-300 cursor-pointer"
+                  onClick={() => handleNavigation(post.link)}
                 >
                   {/* Image Wrapper */}
-                  <div className="relative scale-100 duration-300 hover:scale-105 cursor-pointer transition">
+                  <div className="relative scale-100 duration-300 hover:scale-105 transition">
                     {/* Image */}
                     <img
                       src={post.image}
                       alt={post.title}
                       className="w-full h-48 object-cover "
                     />
-
-                    {/* Overlay */}
-                    {/* <div className="absolute inset-0 bg-primary bg-opacity-40 hover:bg-opacity-10 transition duration-300"></div> */}
                   </div>
 
                   <div className="p-4">
@@ -188,10 +183,6 @@ export default function Blog() {
             </div>
           </div>
         </section>
-
-
-
-
 
       </div>
 

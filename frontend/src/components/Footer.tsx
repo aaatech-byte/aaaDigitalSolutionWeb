@@ -2,7 +2,6 @@ import { Facebook, Linkedin, Instagram } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import pinterestIco from "../../public/icons/pinterestLOGO.png"
 
 const footerData = {
   logoSrc: "/icons/logoDIGITAL.png",
@@ -20,9 +19,9 @@ const footerData = {
 export default function Footer() {
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string) => {
     navigate(path);
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
   };
 
   return (
@@ -74,7 +73,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <img src={pinterestIco} className="w-7" alt="" />
+                <img src="icons/pinterestLOGO.png" className="w-7" alt="" />
               </a>
             </div>
           </div>
@@ -112,11 +111,13 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { name: "About us", path: "/about" },
-                { name: "Services", path: "/about" },
+                { name: "Services", path: "/services" },
                 { name: "Our Work", path: "/work" },
                 { name: "Blogs", path: "/blog" },
-                { name: "Careers", path: "/contact" },
+                { name: "Careers", path: "/career" },
                 { name: "Contact Us", path: "/contact" },
+                { name: "Terms & Conditions", path: "/termsconditions" },
+                { name: "Privacy Policy", path: "/privacypolicy" },
               ].map((link, index) => (
                 <li key={index}>
                   <button
@@ -150,9 +151,6 @@ export default function Footer() {
                 <div
                   key={index}
                   className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
-                  onClick={() =>
-                    window.open(footerData.contactInfo.addressLink, "_blank")
-                  }
                 >
                   <LocationOnIcon className="mr-2" />
                   <span className="text-sm">{address}</span>

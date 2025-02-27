@@ -4,7 +4,7 @@ const Blog5 = () => {
     title: "Top Mobile App Development Trends You Can't Miss in 2025",
     publishDate: "Jan 22, 2025",
     image:
-      "https://www.appikr.com/blog/wp-content/uploads/2024/03/A-Beginners-Tutorial-on-Cross-Platform-Mobile-App-Development.png",
+      "/images/blog_images/blog5.jpg",
     desc_p1: `
       Mobile app development is advancing at an unprecedented pace. With the rise of AI-powered features, augmented reality (AR), and instant apps, staying ahead of the competition requires embracing these cutting-edge trends. In this blog, we will dive into the top mobile app development trends of 2025 that can revolutionize your app's performance, user engagement, and security.
     `,
@@ -57,131 +57,133 @@ const Blog5 = () => {
   };
 
   return (
-    <main className="max-w-4xl m-auto pt-24 pb-10">
-      <div className="flex justify-between items-center">
-        <p className="text-gray-300 text-xl font-semibold italic">
-          {post.publishDate}
-        </p>
-      </div>
+    <main className="bg-gradient-primary pt-24 pb-10">
+      <section className="max-w-4xl m-auto  ">
+        <div className="flex justify-between items-center">
+          <p className="text-gray-300 text-xl font-semibold italic">
+            {post.publishDate}
+          </p>
+        </div>
 
-      <h1 className="font-bold py-5 font-orbitron text-4xl text-white">{post.title}</h1>
+        <h1 className="font-bold py-5 font-orbitron text-4xl text-white">{post.title}</h1>
 
-      <img
-        className="w-full object-cover rounded-3xl"
-        src={post.image}
-        alt={post.title}
-      />
+        <img
+          className="w-full object-cover rounded-3xl"
+          src={post.image}
+          alt={post.title}
+        />
 
-      <div className="descriptions py-3 px-4">
-        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-          {post.desc_p1}
-        </p>
+        <div className="descriptions py-3 px-4">
+          <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+            {post.desc_p1}
+          </p>
 
-        <p className="text-white font-bold pt-5 text-2xl leading-9 tracking-wide font-orbitron">
-          {post.desc_h1}
-        </p>
+          <p className="text-white font-bold pt-5 text-2xl leading-9 tracking-wide font-orbitron">
+            {post.desc_h1}
+          </p>
 
-        <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
-          {post.desc_h2}
-        </p>
-        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-          {post.desc_p2}
-        </p>
+          <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
+            {post.desc_h2}
+          </p>
+          <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+            {post.desc_p2}
+          </p>
 
-        {[
-          {
-            title: "1. AI and Machine Learning Integration",
-            desc: "AI is transforming the mobile app landscape with smarter features like voice assistants, chatbots, and personalized recommendations.",
-          },
-          {
-            title: "2. Cloud-Based Apps",
-            desc: "Cloud-based apps are improving performance with real-time syncing, reduced app sizes, and scalable solutions.",
-          },
-          {
-            title: "3. Augmented Reality (AR)",
-            desc: "AR offers interactive and immersive experiences in industries like retail, education, and gaming.",
-          },
-          {
-            title: "4. Instant Apps",
-            desc: "Instant apps let users experience your app without installing it, enhancing engagement and user acquisition.",
-          },
-          {
-            title: "5. Mobile Payments & Security",
-            desc: "Security is essential with mobile payments, and features like biometric authentication, encryption, and blockchain ensure safe transactions.",
-          },
-        ].map((trend, index) => (
-          <div key={index}>
-            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
-              {trend.title}
-            </p>
-            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-              {trend.desc}
-            </p>
-          </div>
-        ))}
-
-        <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
-          How These Trends Will Benefit Your Mobile App
-        </p>
-        <ul className="text-gray-300 text-lg leading-9 pl-5 tracking-wide font-clashDisplay">
-          {post.desc_benefits.map((benefit, index) => (
-            <li key={index} className="list-disc">
-              {benefit}
-            </li>
+          {[
+            {
+              title: "1. AI and Machine Learning Integration",
+              desc: "AI is transforming the mobile app landscape with smarter features like voice assistants, chatbots, and personalized recommendations.",
+            },
+            {
+              title: "2. Cloud-Based Apps",
+              desc: "Cloud-based apps are improving performance with real-time syncing, reduced app sizes, and scalable solutions.",
+            },
+            {
+              title: "3. Augmented Reality (AR)",
+              desc: "AR offers interactive and immersive experiences in industries like retail, education, and gaming.",
+            },
+            {
+              title: "4. Instant Apps",
+              desc: "Instant apps let users experience your app without installing it, enhancing engagement and user acquisition.",
+            },
+            {
+              title: "5. Mobile Payments & Security",
+              desc: "Security is essential with mobile payments, and features like biometric authentication, encryption, and blockchain ensure safe transactions.",
+            },
+          ].map((trend, index) => (
+            <div key={index}>
+              <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
+                {trend.title}
+              </p>
+              <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+                {trend.desc}
+              </p>
+            </div>
           ))}
-        </ul>
 
-        <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
-          {post.crossPlatformSection.title}
-        </p>
-        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-          {post.crossPlatformSection.content}
-        </p>
+          <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
+            How These Trends Will Benefit Your Mobile App
+          </p>
+          <ul className="text-gray-300 text-lg leading-9 pl-5 tracking-wide font-clashDisplay">
+            {post.desc_benefits.map((benefit, index) => (
+              <li key={index} className="list-disc">
+                {benefit}
+              </li>
+            ))}
+          </ul>
 
-        {post.crossPlatformSection.points.map((point, index) => (
-          <div key={index}>
-            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
-              {point.heading}
-            </p>
-            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-              {point.text}
-            </p>
-          </div>
-        ))}
+          <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
+            {post.crossPlatformSection.title}
+          </p>
+          <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+            {post.crossPlatformSection.content}
+          </p>
 
-        <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
-          How Cross-Platform Development Saves You Time and Money
-        </p>
-        {post.crossPlatformSection.howItSaves.map((item, index) => (
-          <div key={index}>
-            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
-              {item.heading}
-            </p>
-            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-              {item.text}
-            </p>
-          </div>
-        ))}
+          {post.crossPlatformSection.points.map((point, index) => (
+            <div key={index}>
+              <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
+                {point.heading}
+              </p>
+              <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+                {point.text}
+              </p>
+            </div>
+          ))}
 
-        <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
-          Real-World Success Story
-        </p>
-        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-          {post.crossPlatformSection.successStory}
-        </p>
+          <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
+            How Cross-Platform Development Saves You Time and Money
+          </p>
+          {post.crossPlatformSection.howItSaves.map((item, index) => (
+            <div key={index}>
+              <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
+                {item.heading}
+              </p>
+              <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+                {item.text}
+              </p>
+            </div>
+          ))}
 
-        <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
-          Conclusion
-        </p>
-        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
-          Mobile app development in 2025 is about integrating cutting-edge
-          technologies for smarter, more efficient, and secure apps. By
-          embracing trends like AI, AR, cloud solutions, and cross-platform
-          development, you can stay ahead of the competition. Contact us today
-          to start building your custom mobile app and unlock its full
-          potential!
-        </p>
-      </div>
+          <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
+            Real-World Success Story
+          </p>
+          <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+            {post.crossPlatformSection.successStory}
+          </p>
+
+          <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
+            Conclusion
+          </p>
+          <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
+            Mobile app development in 2025 is about integrating cutting-edge
+            technologies for smarter, more efficient, and secure apps. By
+            embracing trends like AI, AR, cloud solutions, and cross-platform
+            development, you can stay ahead of the competition. Contact us today
+            to start building your custom mobile app and unlock its full
+            potential!
+          </p>
+        </div>
+      </section>
     </main>
   );
 };

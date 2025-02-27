@@ -5,6 +5,7 @@ import FeaturedWork from '../../components/FeaturedWork';
 import Testimonials from '../../components/Testimonials';
 import ContactForm from '../../components/ContactCTA';
 import OurMission from '../../components/OurMission';
+// import OurWork from '../../components/OurWork';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <Services />
       <FeaturedWork />
+      {/* <OurWork/> */}
       <Testimonials />
       <OurMission/>
       <Stats />

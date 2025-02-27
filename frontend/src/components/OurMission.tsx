@@ -1,11 +1,4 @@
 import {
-  // Code,
-  // Smartphone,
-  // Megaphone,
-  // Gauge,
-  // Users,
-  // Clapperboard,
-  // ShoppingBag,
   Rss,
   ArrowRight,
 } from "lucide-react";
@@ -67,7 +60,6 @@ export default function App() {
                     key={index}
                     className="gradient-primary  opacity-90 scale-100 hover:scale-105 duration-300 p-2 md:p-3 lg:p-5 rounded-lg shadow-md hover:shadow-xl"
                   >
-                    {/* <feature.icon className="h-12 w-12 text-primary mb-4" /> */}
                     <h3 className="text-[17px] lg:text-base font-orbitron 2xl:text-lg font-semibold text-white mb-3">
                       {feature.title}
                     </h3>

@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
                   <div className="w-11">
                     <img
                       className="rounded-full w-11"
-                      src="https://jthemes.net/themes/html/growim/assets/images/resources/why-choose-three-author.jpg"
+                      src="images/team-images/haseeb.jpg"
                       alt=""
                     />
                   </div>

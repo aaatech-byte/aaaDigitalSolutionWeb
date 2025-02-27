@@ -275,7 +275,7 @@ const FeaturedWork: React.FC = () => {
       "subtitle": "Enhancing Customer Support for XYZ Tech",
       "category": "Custom Software Solutions",
       "description": "XYZ Tech faced delays in responding to customer inquiries, leading to lower customer satisfaction and increased support costs.",
-      "image": "https://example.com/chatbot.jpg",
+      "image": "https://www.sphinx-solution.com/blog/wp-content/uploads/2019/06/successful-software-solutions.jpg",
       "features": ["24/7 automated responses", "Seamless human-agent handoff"],
       "challenge": "High response time in customer support, leading to frustrated customers.",
       "solution": "Developed an AI-driven chatbot that handles common inquiries, reducing the load on human agents.",

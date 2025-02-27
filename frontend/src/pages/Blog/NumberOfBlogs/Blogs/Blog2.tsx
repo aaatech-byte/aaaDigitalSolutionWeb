@@ -2,7 +2,7 @@ const Blog2 = () => {
   const post = {
     category: "E-Commerce Optimization",
     title: "Boost Your E-Commerce Performance with These Simple Tips",
-    publishDate: "Jan 22, 2025",
+    publishDate: "Jan 21, 2025",
     image: "/images/blog_images/blog2.jpg",
     desc_p1: `
       Optimizing your e-commerce website is essential for improving user experience, boosting sales, and staying ahead of your competition. In this blog, we'll share simple but effective tips to enhance your e-commerce site's performance, drive more traffic, and increase conversions.
@@ -75,7 +75,7 @@ const Blog2 = () => {
         </h1>
         <img
           className="w-full object-cover rounded-3xl"
-          src="images/blog_images/blog2.jpg"
+          src={post.image}
           alt={post.title}
         />
 

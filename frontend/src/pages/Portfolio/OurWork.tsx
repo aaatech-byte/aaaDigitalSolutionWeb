@@ -255,7 +255,19 @@ const projects: Project[] = [
       result: "Boosted product sales and social media engagement.",
       technologiesUsed:
         "Adobe Premiere Pro, Final Cut Pro, Social Media Marketing",
-    },
+    }, 
+    {
+      "title": "AI-Powered Customer Support Chatbot",
+      "subtitle": "Enhancing Customer Support for XYZ Tech",
+      "category": "Custom Software Solutions",
+      "description": "XYZ Tech faced delays in responding to customer inquiries, leading to lower customer satisfaction and increased support costs.",
+      "image": "https://www.sphinx-solution.com/blog/wp-content/uploads/2019/06/successful-software-solutions.jpg",
+      "features": ["24/7 automated responses", "Seamless human-agent handoff"],
+      "challenge": "High response time in customer support, leading to frustrated customers.",
+      "solution": "Developed an AI-driven chatbot that handles common inquiries, reducing the load on human agents.",
+      "result": "Reduced response time by 70% and improved customer satisfaction.",
+      "technologiesUsed": "Python, TensorFlow, Dialogflow, Node.js"
+    } 
   ];
 
 
