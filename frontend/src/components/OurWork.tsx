@@ -31,18 +31,26 @@ const Carousel = () => {
     }, []);
 
     return (
-        <section id="work" className="relative bg-gradient-primary w-full px-4 sm:px-6 lg:px-8">
+        <section id="work" className="relative bg-gradient-primary w-full px-4 sm:px-6 lg:px-8 pt-12 pb-12">
+            <div className="text-center px-4">
+                <h2 className=" text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
+                    Our <span className="text-yellow">Work</span>
+                </h2>
+                <p className="text-base sm:text-lg text-white max-w-3xl mx-auto">
+                Transforming Ideas into Impactful Digital Experiences That Drive Growth and Innovation
+                </p>
+            </div>
             <div className="relative w-full mx-auto max-w-7xl overflow-hidden">
                 <div
                     className="flex h-[15rem] sm:h-[20rem] md:h-[30rem] lg:h-[40rem] xl:h-[49rem] transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                     {slides.map((slide, index) => (
-                        <div
+                        <div 
                             key={index}
                             className="w-full shrink-0 flex justify-center items-center duration-700 ease-in-out"
                         >
-                            <div className="relative w-[90%] sm:w-[85%] h-[72%]">
+                            <div className="relative w-[90%] sm:w-[85%] h-[75%] sm:h-[80%]">
                                 <img src="/images/work_images/desktop_top.png" className="w-full" alt="Browser Frame" />
                                 <img
                                     className="absolute w-full h-full"
@@ -55,7 +63,7 @@ const Carousel = () => {
                 </div>
             </div>
 
-            <div className="absolute top-[75%] sm:top-[75%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 z-30 w-[80px] sm:w-[130px] md:w-[170px] lg:w-[270px]">
+            <div className="absolute top-[80%] sm:top-[79%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 z-30 w-[80px] sm:w-[130px] md:w-[170px] lg:w-[270px]">
                 <img src="/images/work_images/phone_body.png" className="mx-auto relative" alt="Phone" />
                 <div className="absolute top-[11.5%] left-[24%] w-[52%] h-[76%] overflow-hidden">
                     <img className="h-full w-full" src={slides[currentIndex].mobile} alt="Mobile View" />
@@ -74,13 +82,13 @@ const Carousel = () => {
 
             <button
                 onClick={prevSlide}
-                className="absolute top-1/2 left-4 sm:left-6 lg:left-10 transform -translate-y-1/2 bg-white/30 p-2 sm:p-3 rounded-full"
+                className="absolute top-[58%] left-4 sm:left-6 lg:left-10 xl:left-48 transform -translate-y-1/2 text-yellow font-bold  bg-white/30 p-2 sm:p-3 rounded-full"
             >
                 &#10094;
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute top-1/2 right-4 sm:right-6 lg:right-10 transform -translate-y-1/2 bg-white/30 p-2 sm:p-3 rounded-full"
+                className="absolute top-[58%] right-4 sm:right-6 lg:right-10 xl:right-48 transform -translate-y-1/2 text-yellow font-bold bg-white/30 p-2 sm:p-3 rounded-full"
             >
                 &#10095;
             </button>

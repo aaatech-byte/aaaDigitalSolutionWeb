@@ -123,25 +123,6 @@ const FeaturedWork: React.FC = () => {
       technologiesUsed: "Flutter, Dart, Firebase, REST APIs",
     },
     {
-      title: "Shopify Store for",
-      subtitle: "EchoCycle Sports",
-      category: "E-Commerce Solutions",
-      description:
-        "EchoCycle Sports faced challenges with their previous e-commerce store due to low conversion rates and a poor mobile shopping experience. Customers found it difficult to complete purchases, leading to abandoned carts and lost sales.",
-      image:
-        "https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg",
-      features: [
-        "Mobile optimization",
-        "Integrated with inventory management",
-        "Streamlined order processing",
-      ],
-      challenge: "Low conversion rates and poor mobile shopping experience.",
-      solution:
-        "Designed and developed a custom Shopify store optimized for mobile devices, integrated with inventory management, and streamlined order processing.",
-      result: "Increased conversion rates and boosted sales.",
-      technologiesUsed: "Shopify, Liquid, HTML5, CSS3, JavaScript",
-    },
-    {
       title: "Shopify Store for ",
       subtitle: "EchoCycle Sports",
       category: "Email Marketing & Automation",
@@ -260,10 +241,10 @@ const FeaturedWork: React.FC = () => {
     },
     {
       "title": "Retail Inventory Management System",
-      "subtitle": "Optimized Stock Control for ABC Retail",
+      "subtitle": "Optimized Stock Control for Retail",
       "category": "Custom Software Solutions",
-      "description": "ABC Retail struggled with inventory discrepancies and inefficient stock management, leading to overstocking and lost sales opportunities.",
-      "image": "https://example.com/inventory-system.jpg",
+      "description": "Retail struggled with inventory discrepancies and inefficient stock management, leading to overstocking and lost sales opportunities.",
+      "image": "https://www.metamodel.com.au/wp-content/uploads/2024/05/cloud-governance-1-768x424.png",
       "features": ["Real-time stock tracking", "Automated restocking alerts"],
       "challenge": "Inconsistent inventory tracking and manual errors.",
       "solution": "Developed a custom inventory management system that provides real-time tracking, reducing stock inconsistencies.",
@@ -272,9 +253,9 @@ const FeaturedWork: React.FC = () => {
     },
     {
       "title": "AI-Powered Customer Support Chatbot",
-      "subtitle": "Enhancing Customer Support for XYZ Tech",
+      "subtitle": "Enhancing Customer Support for Tech",
       "category": "Custom Software Solutions",
-      "description": "XYZ Tech faced delays in responding to customer inquiries, leading to lower customer satisfaction and increased support costs.",
+      "description": "Tech faced delays in responding to customer inquiries, leading to lower customer satisfaction and increased support costs.",
       "image": "https://www.sphinx-solution.com/blog/wp-content/uploads/2019/06/successful-software-solutions.jpg",
       "features": ["24/7 automated responses", "Seamless human-agent handoff"],
       "challenge": "High response time in customer support, leading to frustrated customers.",

@@ -20,8 +20,8 @@ body {
   background: #3D1794;
 }
 
-.gradient-primary{
-    background: linear-gradient(177deg, #3f15a0, #13072E);
+.gradient-primary {
+  background: linear-gradient(177deg, #3f15a0, #13072E);
 }
 
 /* see more styling  */
@@ -130,6 +130,91 @@ body {
   }
 } */
 
-.ReactModal__Overlay{
+.ReactModal__Overlay {
   z-index: 99;
-} 
+}
+
+
+/* logos swiper styles */
+.swiper-slide {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Default styling for non-centered slides */
+.swiper-slide .slide-content {
+  @apply opacity-30 scale-90;
+}
+
+/* Styling for the active (centered) slide with inner shadow */
+.swiper-slide-active .slide-content {
+  @apply opacity-100 scale-105 border-4 border-[#e48200ba];
+  box-shadow: inset 0 0 22px 0px #FF9E1B;
+}
+
+
+
+
+/* featured-insights card styling */
+.cardBox {
+  width: 250px;
+  height: 223px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .cardBox {
+    width: 95%;
+  }
+}
+
+.card {
+  position: absolute;
+  border: 2.5px solid #696767;
+  width: 95%;
+  height: 95%;
+  border-radius: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.99) 0px 30px 330px -12px inset,
+    rgba(0, 0, 0, 0.9) 0px 18px 36px -18px inset;
+}
+
+
+.card .content h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.card .content p {
+  font-size: 13px;
+  line-height: 1.4em;
+}
+
+.card .content {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.card:hover .content {
+  transform: translateY(0);
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.card:hover .h4 {
+  opacity: 0;
+}
