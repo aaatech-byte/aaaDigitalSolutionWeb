@@ -50,7 +50,7 @@ const Services: React.FC = () => {
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-col items-center justify-center p-1" style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                   <div className="absolute bg-primary w-full h-full opacity-70"></div>
-                  <service.icon className="h-12 w-12 text-yellow mx-auto mb-2 z-20zz" />
+                  <service.icon className="h-12 w-12 text-yellow mx-auto mb-2 z-20" />
                   <h3 className="font-3d text-xl font-bold mt-5 text-white font-orbitron z-20">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                   </h3>
                 </div>
