@@ -163,7 +163,7 @@ const FeaturedWork: React.FC = () => {
           <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
             <div
               ref={modalRef}
-              className="max-w-7xl w-full bg-white shadow-xl rounded-lg p-4 sm:p-6 mt-80 md:mt-32"
+              className="max-w-7xl w-full bg-white shadow-xl rounded-lg p-4 sm:p-6"
             >
               <h3 className="text-2xl font-bold text-primary font-orbitron mb-3">
                 {selectedProject.title} <span className="text-yellow">{selectedProject.subtitle}</span>
