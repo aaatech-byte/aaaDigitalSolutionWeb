@@ -28,7 +28,7 @@ function FeaturedInsights() {
 
     return (
         <main className="relative bg-gradient-primary w-full px-4 sm:px-6 lg:px-8 pt-12 pb-16">
-            <section className="mx-auto max-w-7xl overflow-hidden flex flex-col lg:flex-row justify-between items-center gap-5">
+            <section className="mx-auto max-w-7xl overflow-hidden flex flex-col lg:flex-row justify-between items-center sm:gap-2 gap-40 ">
                 <article className='w-full lg:w-1/3 mb-8 lg:mb-0 '>
                     <h2 className="text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
                         Featured <span className="text-yellow">Insights</span>
@@ -37,7 +37,7 @@ function FeaturedInsights() {
                         Our journey of transforming businesses across services and industries from Concept to completion.
                     </p>
                     <Link to="/contact">
-                        <Button variant="primary" size="md" className="group px-3.5 py-2.5 border border-gray-400 font-bold mt-16">
+                        <Button variant="primary" size="md" className="group px-3.5 py-2.5 border border-gray-400 font-bold sm:mt-12 mt-9 md:mt-16">
                             Explore Now
                             <ArrowRight className="ml-3 h-7 w-7 bg-yellow text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" />
                         </Button>
@@ -45,7 +45,7 @@ function FeaturedInsights() {
                 </article>
 
                 <article className="w-full lg:w-2/3 ">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 sm:gap-4">
                         <div className="flex flex-col justify-center items-center col1">
                             <div className="cardBox ">
                                 <div className="card bg-[url('/images/insight_images/insight_1.jpg')] bg-cover bg-center">
@@ -72,7 +72,7 @@ function FeaturedInsights() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center col2 pb-16">
+                        <div className="flex flex-col justify-center items-center pb-0 md:pb-16 col2">
                             <div className="cardBox">
                                 <div className="card bg-[url('/images/insight_images/insight_3.jpg')] bg-cover bg-center">
                                     <h3 className="text-base text-left px-2 text-white font-orbitron">Cross-Platform Apps 2025: <span className="text-yellow font-semibold">Save 50% on Development Costs</span></h3>
