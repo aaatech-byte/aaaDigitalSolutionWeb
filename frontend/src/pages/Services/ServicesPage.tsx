@@ -45,10 +45,10 @@ const ServicesPage: React.FC = () => {
       <section id="services" className="py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {services.map((service, index) => (
-            <div key={index} onClick={() => openModal(service)} className="flip-card relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]">
+            <div key={index} onClick={() => openModal(service)} className="flip-card relative rounded-xl group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-col items-center justify-center p-1" style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="absolute bg-primary w-full h-full opacity-70"></div>
+                  <div className="absolute bg-primary rounded-xl w-full h-full opacity-60"></div>
                   <service.icon className="h-12 w-12 text-yellow mx-auto mb-2 z-20" />
                   <h3 className="font-3d text-xl font-bold mt-5 text-white font-orbitron z-20">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                   </h3>
@@ -56,7 +56,9 @@ const ServicesPage: React.FC = () => {
                 <div className="flip-card-back flex flex-col items-center justify-center p-5 bg-black bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out text-white text-center z-20">
                   <h3 className="text-base md:text-lg font-bold mb-3 font-orbitron font-3d">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                   </h3>
-                  <p className="text-white text:xs sm:text-sm font-3d">{service.description}....</p>
+                  <p className="text-white text:xs sm:text-sm font-3d">{service.description}
+                    <span>....</span>
+                  </p>
                 </div>
               </div>
             </div>

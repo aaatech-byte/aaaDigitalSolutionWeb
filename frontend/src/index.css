@@ -76,6 +76,7 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   50% {
     transform: translateX(30%);
   }
@@ -89,6 +90,7 @@ body {
   0% {
     bottom: 0px;
   }
+
   100% {
     bottom: 50px;
   }
@@ -140,7 +142,8 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
-  perspective: 1000px; /* Add perspective for 3D effect */
+  perspective: 1000px;
+  /* Add perspective for 3D effect */
 }
 
 @media only screen and (max-width: 640px) {
@@ -165,7 +168,8 @@ body {
   box-shadow: rgba(0, 0, 0, 0.99) 0px 30px 330px -12px inset,
     rgba(0, 0, 0, 0.9) 0px 18px 36px -18px inset;
   transition: transform 0.6s;
-  transform-style: preserve-3d; /* Enable 3D transformations */
+  transform-style: preserve-3d;
+  /* Enable 3D transformations */
 }
 
 .card .content h3 {
@@ -198,8 +202,8 @@ body {
   opacity: 0;
 }
 
-/* services styling */
 
+/* services styling */
 /* styles.css */
 .flip-card {
   background-color: transparent;
@@ -219,7 +223,8 @@ body {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   display: flex;
@@ -231,19 +236,41 @@ body {
   border-radius: 1rem;
 }
 
-.flip-card-front {
-  background-color: transparent;
-}
-
 .flip-card-back {
   transform: rotateY(180deg);
 }
 
-.font-3d {
-  transform: perspective(1000px) translateZ(50px);
+/* Ensure the container has perspective */
+.flip-card-front {
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* 3D Floating Text */
+.font-3d {
+  position: relative;
+  display: inline-block;
+  transform: perspective(1200px) translateZ(50px);
+  text-shadow: 2px 3px 12px rgb(0 0 0 / 64%),
+  0px 0px 12px rgba(0, 0, 0, 0.274),
+  0 0px 12px rgb(0 0 0 / 66%);
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* On Hover, Lift the Text More */
+.flip-card:hover .font-3d {
+  transform: perspective(1200px) translateZ(190deg);
+  text-shadow: 2px 3px 33px rgb(0 0 0 / 64%),
+  0px 0px 33px rgba(0, 0, 0, 0.674),
+  0 0px 44px rgba(0, 0, 0, 0.321);
+}
+
+
 /* Custom CSS for scroll effect */
-.col1, .col2 {
+.col1,
+.col2 {
   transition: transform 0.3s ease-in-out;
 }

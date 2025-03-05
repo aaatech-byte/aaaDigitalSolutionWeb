@@ -46,10 +46,10 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {services.map((service, index) => (
-            <div key={index} onClick={() => openModal(service)} className="flip-card relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]">
+            <div key={index} onClick={() => openModal(service)} className="flip-card relative rounded-xl group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]">
               <div className="flip-card-inner">
                 <div className="flip-card-front flex flex-col items-center justify-center p-1" style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="absolute bg-primary w-full h-full opacity-70"></div>
+                  <div className="absolute bg-primary rounded-xl w-full h-full opacity-60"></div>
                   <service.icon className="h-12 w-12 text-yellow mx-auto mb-2 z-20" />
                   <h3 className="font-3d text-xl font-bold mt-5 text-white font-orbitron z-20">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                   </h3>
@@ -65,6 +65,8 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
+
+        
       </div>
 
       {/* Modal */}
