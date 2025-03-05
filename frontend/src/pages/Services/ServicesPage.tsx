@@ -59,6 +59,15 @@ const ServicesPage: React.FC = () => {
                   <p className="text-white text:xs sm:text-sm font-3d">{service.description}
                     <span>....</span>
                   </p>
+                  <div className="flex flex-col justify-center sm:flex-row mt-4">
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      className="group px-2 py-2 border"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

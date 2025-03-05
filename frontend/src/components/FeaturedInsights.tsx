@@ -14,7 +14,7 @@ function FeaturedInsights() {
                 const col1Translate = 510 - scrollPosition * 0.15;
                 col1.style.transform = `translateY(${col1Translate}px)`;
             }
-    
+            
             if (col2) {
                 const col2Translate = 580 - scrollPosition * 0.15;
                 col2.style.transform = `translateY(${col2Translate}px)`;
