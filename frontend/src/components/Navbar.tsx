@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "Careers", to: "/career" },
   ];
 
+  // Close the navbar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
@@ -38,6 +39,11 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+
+  // Close navbar when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="fixed w-full bg-black/90 backdrop-blur-sm z-50 md:px-12 px-4">
@@ -57,14 +63,13 @@ export default function Navbar() {
                 key={link.name}
                 to={link.to}
                 className={`${location.pathname === link.to
-                  ? "text-yellow font-semibold font-orbitron "
+                  ? "text-yellow font-semibold font-orbitron"
                   : "text-white font-semibold font-orbitron"
                   } hover:-translate-y-1 duration-200 ease-linear hover:text-[#F4D000] transition`}
               >
                 {link.name}
               </NavLink>
             ))}
-
           </div>
 
           <div>
@@ -82,8 +87,9 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700"
           >
-            {isOpen ?
-              <X size={24} color="white" /> : <img src="icons/hemburger-menu.png" className="w-14" alt="" />
+            {isOpen ? 
+              <X size={24} color="white" /> : 
+              <img src="icons/hemburger-menu.png" className="w-14" alt="" />
             }
           </button>
         </div>
@@ -96,8 +102,9 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.to}
+                onClick={() => setIsOpen(false)} // Close navbar when a link is clicked
                 className={`${location.pathname === link.to
-                  ? "text-yellow font-semibold"
+                  ? "text-yellow font-semibold "
                   : "text-white font-semibold"
                   } block px-3 py-2 hover:-translate-y-0.5 duration-300 hover:text-black transition`}
               >
@@ -108,7 +115,7 @@ export default function Navbar() {
               <Link to="/contact">
                 <button
                   type="submit"
-                  className="flex  justify-center gap-2 items-center mx-auto shadow-xl text- bg-[#F4D000] backdrop-blur-md  isolation-auto text-black before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFFFFF] hover:text-primary hover:border-emerald-600 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2.5 overflow-hidden rounded-xl group font-semibold"
+                  className="flex justify-center gap-2 items-center mx-auto shadow-xl text- bg-[#F4D000] backdrop-blur-md isolation-auto text-black before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFFFFF] hover:text-primary hover:border-emerald-600 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2.5 overflow-hidden rounded-xl group font-semibold"
                 >
                   Get Started
                 </button>
@@ -120,4 +127,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

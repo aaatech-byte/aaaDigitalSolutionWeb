@@ -51,7 +51,7 @@ body {
   animation: bounce 1.1s infinite ease-in;
   box-shadow: rgb(0 0 0) 0px 0px 34px, rgb(0 0 0 / 84%) 0 0px 0px 0px;
   border-radius: 100%;
-  z-index: 99;
+  z-index: 91;
 }
 
 
