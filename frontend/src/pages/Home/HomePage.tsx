@@ -13,15 +13,16 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <LogosSection/>
-      <OurWork/>
+      <LogosSection />
+      <OurWork />
       <Services />
       <Testimonials />
-      <FeaturedInsights/>
+      <FeaturedInsights />
       <FeaturedWork />
-      <OurMission/>
-      <Stats /> 
+      <OurMission />
+      <Stats />
       <ContactForm />
+     
     </main>
   );
 }
