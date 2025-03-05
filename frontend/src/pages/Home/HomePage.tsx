@@ -14,13 +14,13 @@ export default function HomePage() {
     <main>
       <Hero />
       <LogosSection/>
-      <Services />
-      <FeaturedWork />
       <OurWork/>
+      <Services />
       <Testimonials />
-      <OurMission/>
-      <Stats />
       <FeaturedInsights/>
+      <FeaturedWork />
+      <OurMission/>
+      <Stats /> 
       <ContactForm />
     </main>
   );

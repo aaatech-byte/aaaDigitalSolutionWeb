@@ -24,7 +24,6 @@ const slidesData = [
     { id: 15, title: "", image: "/images/logos_imgs/15.png" },
     { id: 16, title: "", image: "/images/logos_imgs/17.png" },
     // { id: 16, title: "", image: "/images/logos_imgs/16.png" },
-
 ];
 
 const LogosSection: React.FC = () => {
@@ -36,8 +35,8 @@ const LogosSection: React.FC = () => {
             centeredSlides: true,
             loop: true,
             autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
+                delay: 1500,
+                disableOnInteraction: true,
             },
             breakpoints: {
                 320: { slidesPerView: 2 },
@@ -56,7 +55,7 @@ const LogosSection: React.FC = () => {
                     const activeSlide = document.querySelector('.swiper-slide-active .slide-content');
                     if (activeSlide) {
                         activeSlide.classList.remove("opacity-30", "scale-90");
-                        activeSlide.classList.add("opacity-100", "scale-105", "shadow-inner", "shadow-orange-500/50", "border-4", "border-orange-500/50" );
+                        activeSlide.classList.add("opacity-100", "scale-105", "shadow-inner", "shadow-orange-500/50", "border-4", "border-orange-500/50");
                     }
                 }
             },
@@ -71,7 +70,7 @@ const LogosSection: React.FC = () => {
                         {slidesData.map(slide => (
                             <div key={slide.id} className="swiper-slide flex justify-center items-center">
                                 <div className="slide-content w-32 h-32 flex flex-col justify-center items-center rounded-xl border-4 opacity-30 border-[#898989] transition-all duration-500 ease-linear ">
-                                    <img src={slide.image} alt={slide.title} className="w-24" />
+                                    <img src={slide.image} alt={slide.title} className="w-28" />
                                     <p className="text-white text-sm mt-2">{slide.title}</p>
                                 </div>
                             </div>

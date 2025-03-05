@@ -9,7 +9,6 @@ interface CoreValue {
 }
 
 const CoreValues: React.FC = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // Core Values Data
   const values: CoreValue[] = [
@@ -34,7 +33,7 @@ const CoreValues: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 bg-gradient-primary from-indigo-900 to-purple-900">
+    <div className="py-12 bg-gradient-primary">
       <section className="mx-auto text-center max-w-7xl">
       <h2 className="mt-4 text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
           Our <span className="text-yellow">Core Values</span>
@@ -43,13 +42,7 @@ const CoreValues: React.FC = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className={`bg-primary p-8 rounded-lg shadow-lg transform transition-transform duration-300 ease-in-out ${
-                hoveredIndex !== null && hoveredIndex !== index
-                  ? "blur-sm scale-95"
-                  : "hover:scale-105"
-              }`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              className="bg-primary p-8 rounded-lg shadow-lg hover:scale-105 cursor-pointer transform transition-transform duration-300 ease-in-out "
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 rounded-full bg-[#FFFFFF]">{value.icon}</div>
